@@ -1,0 +1,96 @@
+img{
+    max-width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .log img{
+        width: 70%;
+    }
+    .login{
+        margin: 3px 0;
+    }
+    .login-list li{
+        margin-left: 10px;
+    }
+    .login-list li:nth-child(4){
+        margin-left: 10px;
+    }
+    .login-list li a{
+        font-size: 10px;
+        text-decoration: none;
+        color: #fff;
+    }
+    .login-list li:nth-child(4) span, .line, .left,.right{
+        display: none;
+    }
+    .description{
+        width: 150px;
+        height: 220px;
+        top: -12%;
+        left: -27%;
+    }
+    .description-1{
+        margin: 0;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .description-2{
+        margin-top: 40px;
+        font-size: 40px;
+    }
+    .description-3{
+
+        font-size: 15px;
+    }
+    .img{
+        width: 100%;
+        top:-6%;
+        left: 39%;
+        transition: all 0.4s;
+        transform: translateX(0);
+    }
+    .img img{
+        height: 90vh;
+    }
+    .footer{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-left,.footer-right{
+        display: block;
+        width: 20px;
+        height: 20px;
+        align-self:flex-end;
+        cursor: pointer;
+    }
+    .footer .navBar{
+        left: 45%;
+    }
+    .footer-left{
+        background: url("../img/btlf.png") no-repeat left;
+
+    }
+    .footer-right{
+        background: url("../img/btrg.png") no-repeat right;
+    }
+    .page{
+        position: absolute;
+        top: -481px;
+        right: 0;
+    }
+    .menu .menu-text{
+        position: absolute;
+        width: 65%;
+        height: 100%;
+        top: 50px;
+        left: 16%;
+        color: #000;
+    }
+
+    .menu-text .contact div{
+        width: 100%;
+        margin-top: 10%;
+       clear: both;
+    }
+}

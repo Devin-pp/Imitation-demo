@@ -1,0 +1,468 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    font-family: "Lucida Grande","Microsoft JhengHei","Microsoft YaHei";
+}
+body::-webkit-scrollbar {
+    /*隐藏滚轮*/
+    display: none;
+}
+a{
+    transition: all 0.3s ease-in-out 0s;
+}
+.header{
+    position: relative;
+    width: 90%;
+    margin: 65px auto;
+}
+.log{
+    display: inline-block;
+    cursor: pointer;
+}
+.login{
+    display: inline-block;
+    float: right;
+    margin: 10px 0;
+}
+.login-list li{
+    display: inline-block;
+    margin-left: 50px;
+    line-height: 20px;
+}
+.login-list li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+}
+.login-list li:nth-child(4){
+    position: relative;
+    margin-left: 100px;
+}
+.login-list li:nth-child(4) span{
+    position: absolute;
+    height: 20px;
+    border: 1px solid #fff;
+    top: 0;
+    left: -50px;
+}
+.line{
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: 200%;
+}
+.line span{
+    position: absolute;
+    width: 145px;
+    height: 10px;
+    overflow: hidden;
+}
+.line-left{
+    left:16%;
+}
+.line-right{
+    right: 0;
+}
+.line-left i,.line-right i{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    border: 1px solid #fff;
+    transition: all 0.5s ease-in-out 0s;
+
+}
+.line1 .moveLeft{
+    left: 100%;
+    z-index: 1000;
+}
+.line1 .moveRight{
+    left: -102%;
+    z-index: 1000;
+}
+.slide{
+    position: relative;
+    width: 90%;
+    height: 390px;
+    margin:  auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.slide span{
+    width: 100px;
+    height: 100px;
+}
+.left{
+    cursor: pointer;
+    background: url("../img/btlf.png") no-repeat;
+}
+.right{
+    cursor: pointer;
+    background: url("../img/btrg.png") no-repeat right ;
+}
+.gino{
+    position: absolute;
+    width: 60%;
+    height: 390px;
+    top: 0;
+    left: 16%;
+}
+.description{
+    position: absolute;
+    width:240px;
+    height: 100%;
+    color: #fff;
+}
+.description-1{
+    margin: 20% 0 0 ;
+    font-size: 20px;
+}
+.description-2{
+    font-size: 77px;
+    margin-bottom: 40px;
+}
+.description-3{
+    font-size: 27px;
+}
+.img{
+    position: absolute;
+    top: -32%;
+    right: -15%;
+    transition: all 0.4s;
+    transform: translateX(0);
+    z-index: -1;
+}
+.img img{
+    max-width: 100%;
+    height: 90vh;
+}
+.footer{
+    width: 90%;
+    height: 50px;
+    margin: 10px auto;
+    display: flex;
+    position: relative;
+}
+.footer .page{
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    line-height: 85px;
+}
+.footer .page i{
+    font-style: normal;
+}
+.footer .navBar{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 16%;
+    cursor: pointer;
+    background: url("../img/nav.png") no-repeat bottom;
+}
+.footer-left,.footer-right{
+    display: none;
+}
+.wallpaper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    left: 0;
+    top: 0;
+    background-size:cover;
+    z-index: -2;
+}
+.wallpaper div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+    backface-visibility: hidden;
+    transform: rotate(0deg) rotateX(0deg);
+    transform-origin: 100% 0 0;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out 0s;
+}
+.wallpaper .dh{
+    height: 90%;
+    top: 40px;
+    transform: rotateY(-12deg) rotateX(-20deg);
+}
+.wallpaper .out{
+    z-index: 9999;
+}
+.wallpaper .wallpaper-mulder{
+    display: block;
+    background: url("../img/bg_1.jpg");
+}
+.wallpaper-gino{
+    background: url("../img/bg_2.jpg");
+}
+.wallpaper-gy_us{
+    background: url("../img/bg_3.jpg");
+}
+.wallpaper-reese{
+    background: url("../img/bg_4.jpg");
+}
+.wallpaper-sup{
+    background: url("../img/bg_5.jpg");
+}
+.wallpaper-supreme {
+    background: url("../img/bg_6.jpg");
+}
+.menu{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:100%;
+    left: 0;
+    background: #fff;
+    transition: all 0.5s ease-in-out 0s;
+    z-index: 1;
+    overflow: hidden;
+    display: none;
+}
+.menu-img{
+    position: absolute;
+    width: 90%;
+    top: 10%;
+    left: 5%;
+}
+.menu-img img{
+    cursor: pointer;
+}
+.menu-img img:nth-child(2){
+    float: right;
+}
+.inner{
+    position: relative;
+    height: 100%;
+    width: 106%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-top: 1%;
+    left: -2%;
+    z-index: -1;
+}
+.menu .menu-text{
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    top: 50px;
+    left: 18%;
+    color: #000;
+}
+.inner::-webkit-scrollbar {
+    /*隐藏滚轮*/
+    display: none;
+}
+.menu .menu-text h3{
+    font-size: 26px;
+    font-weight: normal;
+}
+.menu .menu-text h3:nth-child(1){
+    margin-top: 10%;
+}
+.menu .menu-text h2{
+    font-size: 77px;
+    margin-bottom: 80px;
+    margin-top: 50px;
+    font-style: italic;
+    font-weight: normal;
+}
+.menu-text-img{
+    width: 82%;
+    margin-top: 27%;
+    margin-left: 25%;
+}
+.menu-text-img img{
+    max-width: 30%;
+}
+.menu-text-line{
+    margin: 8% 0;
+    width: 100%;
+    display: block;
+    border: 1px solid #000;
+}
+
+.profile img{
+    margin: 6% 0;
+}
+.projects h4{
+    font-weight: bold;
+    font-size: 20px;
+}
+.projects p{
+    margin: 2% 0;
+}
+.projects p:nth-child(7){
+    margin-bottom: 5%;
+}
+.menu1{
+    position: absolute;
+    background: #fff;
+    width: 96%;
+    height: 99%;
+    margin-top: 10px;
+    left: 2%;
+    transition: all 0.5s ease-in-out 0s;
+}
+.menu2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    margin-top: 0;
+    background: #fff;
+    transition: all 0.5s ease-in-out 0s;
+}
+.menu-text-product{
+    margin-top: 10%;
+}
+.menu-text-product li{
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    color: #fff;
+}
+.bg-darkyellow{
+    background: #c09e79;
+}
+.bg-darklv{
+    background: #b7ba75;
+}
+.bg-darklan{
+    background: #549ae0;
+}
+.bg-darkred{
+    background: #de5954;
+}
+.bg-darkqin{
+    background: #d2cf66;
+}
+.bg-darkzs{
+    background: #e29f50;
+}
+.menu-text-product li h4{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5%;
+}
+.menu-text-product li h4:nth-child(1){
+   margin-top: 5%;
+}
+.menu-text .menu-text-product li h2{
+    font-size: 34px;
+    font-weight: bold;
+    font-style: normal;
+    margin-left: 5%;
+    margin-top: 0;
+}
+.menu-text .menu-text-product li img{
+    margin:-25% 0 0 45%;
+}
+.menu-text .contact{
+    width: 100%;
+
+}
+.menu-text .contact div{
+    width: 50%;
+    float: left;
+    margin-top: 10%;
+}
+.menu-text .contact h2{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    height: 3vh;
+    font-style: normal;
+}
+.menu-text .contact .contact-left h3{
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 3vh;
+    height: 3vh;
+}
+.menu-text .contact .contact-left p{
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 2vh;
+     height: 2vh;
+}
+.menu-text .contact .contact-left span:nth-child(9){
+    margin-left:0;
+}
+.menu-text .contact .contact-left span{
+    margin-left: 5%;
+}
+
+.menu-text .contact .contact-right input{
+    font-size: 18px;
+    width: 100%;
+    height: 5vh;
+    border: none;
+    outline:none;
+    border-bottom: 2px solid #d0d0d0;
+    margin-top: 15px;
+}
+.menu-text .contact .contact-right input:-webkit-autofill {
+    box-shadow: 0 0 0 1000px white inset !important;
+}
+.menu-text .contact .contact-right input:hover{
+    border-color: #aad0f1;
+}
+.menu-text .contact .contact-right button{
+    margin-top: 58px;
+    border: none;
+    color: #666;
+    font-size: 18px;
+    width: 100%;
+    height: 5vh;
+}
+.contact .menu-text-line{
+    float: left;
+    margin: 20% 0 ;
+}
+.gray .success{
+    position: absolute;
+    width: 800px;
+    height: 400px;
+    background: #fff;
+    top:25%;
+    left:21%;
+    text-align: center;
+    opacity: 1;
+    display: none;
+}
+ .success h2{
+    font-size: 38px;
+    margin-top: 150px;
+    margin-bottom: 10px;;
+}
+.success img{
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+ .success p{
+    margin-top: 50px;
+}
+.gray{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(0,0,0,.4);
+    display: none;
+    z-index: 2;
+}
