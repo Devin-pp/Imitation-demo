@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电影排行榜</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding:0;
+    }
+    .box{
+        width: 300px;
+        height: 500px;
+        border: 1px solid black;
+        margin: 100px auto;
+    }
+    ul{
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        position: relative;
+    }
+    ul>p{
+        font-size: 20px;
+        color: rgba(255, 96, 179, 0.8);
+        border-bottom: solid rgba(17, 11, 8, 0.5);
+        padding: 10px;
+
+    }
+    ul>li{
+        width: 300px;
+        border-bottom: dotted #9999aa;
+        margin: 20px 0 ;
+
+    }
+    ul>li>span{
+        margin: 5px;
+        display: inline-block;
+        width:20px;
+        height: 20px;
+        text-align: center;
+        background-color: #919191;
+    }
+    ul>li:nth-child(-n+4) span {
+        background-color: #ff1f90;
+    }
+
+    .content{
+
+        margin: 5px;
+        overflow: hidden;
+        display: none;
+    }
+    .content>img{
+        width: 80px;
+        height: 120px;
+        float: left;
+    }
+    .content>p{
+        width: 200px;
+        height: 100px;
+        font-size: 5px;
+        float: right;
+        line-height: 20px;
+    }
+    .current .content{
+        display: block;
+    }
+</style>
+<body>
+    <div class="box">
+        <ul>
+            <p>电影排行榜</p>
+            <li><span>1</span>电影名称
+            <div class="content">
+                <img src="img/1.jpg" alt="">
+                <p>《哈利·波特》（Harry Potter）是英国作家J·K·罗琳（J. K. Rowling）
+                    于1997～2007年所著的魔幻文学系列小说.
+                </p>
+            </div>
+            </li>
+            <li><span>2</span>电影名称
+                <div class="content">
+                    <img src="img/2.jpg" alt="">
+                    <p>《别有动机》是由强视传媒出品的犯罪悬疑影片，该影片由黄岳泰执导，
+                        陈志恒，彭艳雯联合编剧，林家栋、秦岚、高圣远、任达华、刘威等主演。
+                    </p>
+                </div></li>
+            <li><span>3</span>电影名称
+                <div class="content">
+                    <img src="img/3.jpg" alt="">
+                    <p>《复仇者联盟2：奥创纪元》（Avengers: Age of Ultron）
+                        是漫威影业出品的一部科幻冒险电影，
+                        取材自漫威漫画，是漫威电影宇宙的第十一部电影。
+                    </p>
+                </div></li>
+            <li><span>4</span>电影名称
+                <div class="content">
+                    <img src="img/4.jpg" alt="">
+                    <p>《建国大业》以四十年代抗战胜利直至建国前夕这一波澜壮阔的时代为背景，
+                        以宏大的历史视野，正面再...
+                    </p>
+                </div></li>
+            <li><span>5</span>电影名称
+                <div class="content">
+                    <img src="img/5.jpg" alt="">
+                    <p>故事同樣發生在安靜的韓國小鎮，沒有李滄東《密陽》的尖銳，
+                        不過同樣探討人類原欲與宗教的衝突。
+                        純樸的家庭主婦從教會返到家中，接待兒子的同學。
+                    </p>
+                </div></li>
+        </ul>
+    </div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+    $(function () {
+        $("li").hover(function () {
+            $(this).addClass("current");
+        },function () {
+            $(this).removeClass("current");
+        })
+    })
+</script>
+</body>
+</html>

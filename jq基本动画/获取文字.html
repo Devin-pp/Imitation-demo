@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>获取文字焦点</title>
+</head>
+<style type="text/css">
+	p{
+		width: 200px;
+		height: 400px;
+		margin: 8% auto;
+	}
+	#share{
+		background: url('img/share.gif');
+		width: 26px;
+		height: 26px;
+		position: absolute;
+		display: none;
+	}
+</style>
+<body>
+<p id="word">在新闻发生的第一时间，李克强就批示有关部门，要“以小窥大”，进一步考虑如何通过简政放权、放管结合、优化服务，破除制约社会生产力发展和就业创业的不合理束缚，以主动服务的精神激发市场活力。而11月21日在上海召开的座谈会上，总理再次通过两家小食店的故事“以小窥大”，点题下一阶段政府职能转变和深化“放管服”改革工作。</p>
+<div id="share"></div>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript">
+	window.onload = function () {
+		var selectedTxet;
+        var word = document.getElementById('word');
+        var share = document.getElementById('share');
+        word.onmouseup = function (event) {
+			var e = event;
+
+			if(window.getSelection) {
+				selectedTxet = window.getSelection().toString();
+			}else{
+				selectedTxet = document.selection.createRange().text;
+			}
+         
+	 		if(selectedTxet !== ""){
+	 			share.style.display = 'block';
+
+	 			share.style.left = e.clientX + 'px';
+	 			share.style.top = e.clientY + 'px';
+	 		}
+		};
+
+		document.onmousedown = function (event) {
+               var e = event;
+               var targetId = e.targetId ? e.targetId : e.srcElement.Id;
+               if(targetId !== "share") {
+               	share.style.display = "none";
+               }else {
+               	window.location.href = '';
+               }
+               window.getSelection ? window.getSelection().removeAllRanges() : document.selection.emty();
+		}
+	}
+	
+
+</script>
+</body>
+</html>

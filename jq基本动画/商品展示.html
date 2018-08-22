@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    }
+    .box{
+        margin: 100px auto;
+        width: 400px;
+        border: 1px solid black;
+        position: relative;
+    }
+    .box1{
+        list-style: none;
+        overflow: hidden;
+    }
+    .box1>li{
+        display: inline-block;
+        float: left;
+        width: 130px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+    p{
+        border: 1px solid black;
+        width: 120px;
+        height: 30px;
+        margin-left:120px;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+
+    }
+</style>
+<body>
+<div class="box">
+    <ul class="box1">
+        <li>佳能</li>
+        <li>索尼</li>
+        <li>三星</li>
+        <li>尼康</li>
+        <li>松下</li>
+        <li>卡西欧</li>
+        <li>富士</li>
+        <li>可达</li>
+        <li>宾得</li>
+        <li>理光</li>
+        <li>奥林斯巴</li>
+        <li>明基</li>
+        <li>显示其他品牌</li>
+    </ul>
+    <p class="p">隐藏所有内容</p>
+</div>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        $(".p").click(function () {
+
+
+            $("li:gt(2):lt(9)").stop().slideToggle();
+           if( $(this).text() == '显示所有内容'){
+               $(this).text("隐藏所有内容");
+           }else{
+               $(this).text("显示所有内容");
+           }
+
+        })
+    })
+</script>
+</body>
+</html>

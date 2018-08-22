@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    }
+    .box{
+        margin: 100px auto;
+        width: 1000px;
+        height: 200px;
+        position: relative;
+        background-color: #faf2cc;
+
+    }
+    p{
+        display: inline-block;
+        float: left;
+
+    }
+    .ul{
+
+
+        width: 150px;
+        height: 20px;
+        float: left;
+    }
+    .ul>li{
+
+        margin-left: 5px;
+        width: 20px;
+        height: 20px;
+        float: left;
+        background:url("img/star1.png") no-repeat 0 0;
+        cursor: pointer;
+    }
+    .ul>li.cur{
+        background:url("img/star1.png") no-repeat 0 -28px;
+    }
+
+    li:hover{
+        background:url("img/star1.png") no-repeat 0 -28px;
+    }
+
+    .text{
+        float: left;
+    }
+    .text>li{
+        display: none;
+    }
+    .text>li.sur{
+        position: absolute;
+        display: block;
+        bac
+    }
+    span{
+        color: orangered;
+    }
+
+</style>
+<body>
+<div class="box">
+    <p>点击小星星就能打分:</p>
+    <ul class="ul">
+        <li class="cur"></li>
+        <li><span></span></li>
+        <li><span ></span></li>
+        <li><span ></span></li>
+        <li><span ></span></li>
+    </ul>
+    <ul class="text">
+        <li><p><span>1 分</span> (差得太离谱，与卖家描述的严重不符，非常不满)</p></li>
+        <li><p><span>2 分</span> (部分有破损，与卖家描述的不符，不满意)</p></li>
+        <li><p><span>3 分</span> (质量一般，没有卖家描述的那么好)</p></li>
+        <li><p><span>4 分</span> (质量不错，与卖家描述的基本一致，还是挺满意的)</p></li>
+        <li><p><span>5 分</span> (质量非常好，与卖家描述的完全一致，非常满意)</p></li>
+    </ul>
+
+</div>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+
+        $(".ul>li").click(function () {
+            var index =  $(this).index();
+            var tt = $(".text>li").eq(index);
+            $(this).addClass("cur");
+            $(this).prevAll().addClass("cur");
+            tt.addClass("sur");
+            if( $(this).addClass("cur")){
+                $(this).nextAll().removeClass("cur");
+                tt.siblings().removeClass("sur");
+            }
+        })
+
+    })
+</script>
+</body>
+</html>

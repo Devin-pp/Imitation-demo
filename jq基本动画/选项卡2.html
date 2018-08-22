@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            margin: 100px auto;
+            width: 500px;
+            height: 400px;
+            border: 1px solid black;
+            position: relative;
+        }
+        .box1{
+            width: 500px;
+            height: 400px;
+            list-style: none;
+            position: relative;
+        }
+        .box1>li{
+            display: none;
+        }
+        .box1>li>img{
+            width: 500px;
+            height: 400px;
+
+        }
+        .box2{
+            width: 200px;
+            height: 50px;
+
+            position: absolute;
+            left:300px;
+            top: 350px;
+            list-style: none;
+        }
+        .box2>li{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 12px;
+            cursor: pointer;
+            text-align: center;
+            background-color: #9C9C9C;
+        }
+        .box2 .current{
+            background-color: orange;
+        }
+       .box1 .content{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+<div class="box">
+    <ul class="box1">
+        <li class="content"><img src="img/01.jpg" alt=""></li>
+        <li><img src="img/02.jpg" alt=""></li>
+        <li><img src="img/03.jpg" alt=""></li>
+        <li><img src="img/04.jpg" alt=""></li>
+    </ul>
+    <ol class="box2">
+        <li class="current">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+    $(function () {
+        console.log($(".box1>li").eq(3));
+        $(".box2>li").mouseenter(function () {
+            $(this).addClass("current");
+            $(this).siblings().removeClass("current");
+            var index = $(this).index();
+            var $li = $(".box1>li").eq(index);
+            $li.addClass("content");
+            $li.siblings().removeClass("content");
+        })
+    })
+</script>
+</body>
+</html>

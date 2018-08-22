@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>放大鏡</title>
+</head>
+<style type="text/css">
+	*{
+		margin:0;
+		padding: 0;
+	}
+
+        img{
+            vertical-align: top;
+        }
+	#box{
+		   width: 350px;
+            height: 350px;
+            background-color: red;
+            margin: 100px 0 0 100px;
+
+            position: relative;
+
+	}
+	#centre{
+		
+		width: 100%;
+		height:100%;
+		border: 1px solid #ccc;
+	    position: relative;
+	}
+	#z{
+		width: 350px;
+		height: 350px;
+	}
+	span{
+		width: 100px;
+		height: 100px;
+		background: rgba( 255,255,0, 0.4);
+		position: absolute;
+		left: 0;
+		top:0;
+		cursor: move;
+		display: none;
+	}
+	#big{
+		width: 600px;
+            height: 600px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+
+            position: absolute;
+            left: 360px;
+            top:0;
+
+            display: none;
+	}
+
+    #small img{
+    	margin: 4px;
+    }
+
+</style>
+<body>
+<div id = "box">
+	<div id="centre">
+	    <img  id='z' src="img/pic001.jpg">
+		<span id="gb"></span>
+	</div>
+	<div id="big">
+	  <img id="d" src="img/pic01.jpg" style="position: absolute; left:0; top:0;">
+    </div>
+	</div>
+</div>
+    
+<div id="small">
+	<img src="img/pic0001.jpg">
+	<img src="img/pic0002.jpg">
+	<img src="img/pic0003.jpg">
+</div>
+<script type="text/javascript">
+	//1.所需的標籤
+	var box = document.getElementById('box');
+	
+	var small_box = box.children[0]
+	var centre = document.getElementById('z');
+	var bigbox = box.children[1];
+	var bigimg = document.getElementById('d');
+	var gb = document.getElementById('gb');
+	var smallbox = document.getElementById('small').children;
+     //2.監聽小盒子
+
+    small_box.onmouseover = function () {
+    	//2.1顯示隱藏的圖片
+     	gb.style.display = 'block';
+     	bigbox.style.display = 'block';
+        //2.2 監聽鼠標的移動
+    small_box.onmousemove =function (event) {
+        	var event = event || window.event;
+
+        	//2.3求鼠標的坐標
+        	var pointx = event.clientX - box.offsetLeft -gb.offsetWidth *0.5 ;
+        	var pointy = event.clientY - box.offsetTop - gb.offsetHeight *0.5;
+        	//判斷邊距
+        	if (pointx < 0) {
+        		pointx = 0;
+        	}else if(pointx > small_box.offsetWidth - gb.offsetWidth) {
+        		pointx = small_box.offsetWidth - gb.offsetWidth;
+        	}
+        	if (pointy < 0) {
+        		pointy = 0;
+        	}else if(pointy > small_box.offsetHeight - gb.offsetHeight) {
+        		pointy = small_box.offsetHeight - gb.offsetHeight;
+        	}
+        	gb.style.left = pointx + 'px';
+        	gb.style.top = pointy + 'px';
+        	  //大圖移動
+        	 bigimg.style.left = - pointx / (small_box.offsetWidth / bigbox.offsetWidth) + 'px';
+            bigimg.style.top =  - pointy /(small_box.offsetHeight / bigbox.offsetHeight) + 'px';
+
+        }
+        small_box.onmouseout = function () {
+            // 2.1 把隐藏的内容显示
+            gb.style.display = 'none';
+            bigbox.style.display = 'none';
+          
+           
+        }
+     }
+	
+</script>
+</body>
+</html>

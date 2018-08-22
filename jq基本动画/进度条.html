@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			width: 1000px;
+			height: 35px;
+			margin: 100px auto;
+			position: relative;
+		
+		}
+		#bar{
+			width: 900px;
+			height: 100%;
+			line-height: 35px;
+		    border-radius: 8px;
+			position: relative;
+		    background-color: #ccc;
+		}
+		#Percentage{
+			position: absolute;
+			right: 50px;
+			top: 7px;
+		}
+		#colors{
+			width: 0;
+			height: 100%;
+			background-color: orangered;
+			border-top-left-radius: 8px;
+			border-bottom-left-radius: 8px;
+			position: absolute;
+		}
+		#Square{
+			width: 25px;
+			height: 50px;
+			background-color: orangered;
+			position: absolute;
+			border-radius: 5px;
+			top: -7px;
+			left: 0	px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+  <div id="box">
+  	<div id="bar">
+  		<div id="colors"></div>
+  		<div id="Square"></div>
+  	</div>
+  	<div id="Percentage">0%</div>
+  </div>
+  <script>
+  	window.onload = function () {
+  		//1.获取所需标签
+  	var bar = document.getElementById('bar');
+  	var colors = document.getElementById('colors');
+  	var Square = document.getElementById('Square');
+  	var Percentage = document.getElementById('Percentage');
+
+  	//2.按下鼠标监听
+  	Square.onmousedown = function (event) {
+  		var e = event || window.event;
+
+  		//2.1获取初始位置
+  		var offsetLeft = e.clientX - Square.offsetLeft;
+  		
+  		//2.2监听鼠标的移动
+  		document.onmousemove = function (event) {
+  			var e = event || window.event;
+
+  			//2.3获取移动的位置
+  			var x = e.clientX - offsetLeft;
+  	
+  			//2.3.1边界值处理
+  			if(x < 0){
+  				x = 0;
+  			}else if(x >= bar.offsetWidth - Square.offsetWidth ){
+  				x = bar.offsetWidth - Square.offsetWidth ;
+  			}
+
+  			//2.4动起来
+  			Square.style.left = x + 'px';
+  			colors.style.width = x + 'px';
+  			Percentage.innerHTML = parseInt(x / (bar.offsetWidth - Square.offsetWidth) * 100) + '%';
+  			return false;
+  		};
+
+  		//2.5 监听鼠标抬起
+  		document.onmouseup = function () {
+  			document.onmousemove = null;
+  		}
+  	}
+}
+  	
+  </script>
+</body>
+</html>

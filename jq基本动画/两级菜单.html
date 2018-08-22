@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两级菜单</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        }
+        .box{
+            width: 300px;
+
+            border: 1px solid black;
+            margin: 100px auto;
+            border-radius: 10px;
+        }
+
+        .frist>li{
+            border-bottom: 1px solid black;
+            width: 100%;
+            cursor: pointer;
+            line-height: 50px;
+            text-align: left;
+            text-indent: 2em;
+            list-style: none;
+            position: relative;
+        }
+        .frist>li:last-child{
+            border-bottom:none;
+        }
+        .frist>li>span{
+            width: 70px;
+
+            right: 10px;
+            position: absolute;
+        }
+        .second{
+            list-style: none;
+            width: 100%;
+            display: none;
+        }
+        .second>li{
+            border-bottom:1px solid #ffffff;
+            background-color: #88349c;
+        }
+        .second>li:last-child{
+            border-bottom: none;
+        }
+        .second>li:hover{
+            background-color: red;
+        }
+        .frist>.mask >span{
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+     <div class="box">
+         <ul class="frist">
+             <li>一级菜单<span>></span>
+                 <ul class="second">
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                 </ul>
+             </li>
+             <li>一级菜单<span>></span><ul class="second">
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                 </ul></li>
+             <li>一级菜单<span>></span><ul class="second">
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                 </ul></li>
+             <li>一级菜单<span>></span><ul class="second">
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                 </ul></li>
+             <li>一级菜单<span>></span><ul class="second">
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                 </ul></li>
+             <li>一级菜单<span>></span><ul class="second">
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                 </ul></li>
+             <li>一级菜单<span>></span><ul class="second">
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                 </ul></li>
+             <li>一级菜单<span>></span><ul class="second">
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                 </ul></li>
+         </ul><ul class="second">
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                     <li>二级菜单</li>
+                 </ul>
+     </div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+    $(function () {
+        $(".frist>li").click(function () {
+            //获取二级菜单
+            var $second = $(this).children(".second");
+            var $others = $(this).siblings().children(".second");
+                $second.slideToggle(500);
+                $others.slideUp(500);
+                $(this).toggleClass("mask");
+                $(this).siblings().removeClass("mask");
+        })
+
+    })
+</script>
+</body>
+</html>

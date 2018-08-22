@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		html,body,ul {
+			width: 100%;
+			height: 100%
+		}
+		#box{
+			position: relative;
+		}
+		#box li{
+			width: 250px;
+			height: 360px;
+			box-shadow:  0 0 10px #000;
+			position: absolute;
+			transition: all 1s;
+			cursor: pointer;
+		}
+		#box li.current{
+       		left: 50% !important;
+       		top:50% !important;
+       		transform: rotate(0deg) translate(-50%, -50%) scale(1.5, 1.5) !important;
+       		z-index: 100;
+		}
+	</style>
+</head>
+<body>
+	<ul id="box"></ul>
+	<script src="js/Underscore-min.js"></script>
+	<script>
+		//获取所需的标签
+		var box = document.getElementById('box');
+   		//动态创建li
+		for( var i = 0; i < 10; i++) {
+			var li = document.createElement('li');
+			box.appendChild(li);
+       
+			//2.2创建img
+			var img = document.createElement('img');
+			img.src = "img/pic" + (i + 1) + ".jpg";
+			li.appendChild(img);
+
+			//3.获取所有的li
+			var allLis = document.getElementsByTagName('li');
+
+			//4.获取屏幕的宽高
+			var screenW = document.documentElement.clientWidth - 250;
+			var screenH = document.documentElement.
+			clientHeight - 360;
+
+			//5.遍历
+			for(var j = 0 ; j < allLis.length; j++){
+				var li = allLis[j];
+
+				li.style.left = _.random(0, screenW)  + 'px';
+				li.style.top = _.random(0, screenH)  + 'px';
+
+				//随机角度
+				li.style.transform = 'rotate('+ _.random(0, 330) + 'deg)';
+				//监听照片事件
+				li.onclick = function () {
+                
+					for(var i = 0; i < allLis.length; i++) {
+						allLis[i].className ='';
+					}
+					this.className = 'current';
+				}
+
+			}
+		}
+	</script>
+</body>
+</html>

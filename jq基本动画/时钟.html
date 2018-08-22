@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>时钟</title>
+	<style type="text/css" media="screen">
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	#box{
+		width: 700px;
+		height: 700px;
+		
+		margin: 20px auto;
+	
+	}
+	#d_box{
+	    margin-left:50px; 
+		position: relative;
+		width: 600px;
+		height: 700px;
+		background: url('img/clock.jpg') no-repeat;
+
+	}
+	#h_box,#s_box,#m_box {
+		margin: 0 47.5%;
+		width: 30px;
+		height: 600px;
+		position: absolute;
+	}
+	#h_box{
+		background: url('img/minute.png') no-repeat center center;
+	}
+	#s_box{
+
+		background: url('img/second.png') no-repeat center center;
+	}
+	#m_box{
+		background: url('img/hour.png') no-repeat center center;
+	}
+</style>
+</head>
+<body>
+	<div id="box">
+		<div id="d_box">
+			<div id="h_box"></div>
+			<div id="m_box"></div>
+			<div id="s_box"></div>
+		</div>
+	</div>
+	<script>
+		window.onload = function () {
+			//1.获取所需的标签
+			var hBox = document.getElementById('h_box');
+			var sBox = document.getElementById('s_box');
+			var mBox = document.getElementById('m_box');
+              
+			//2.开启定时器
+			setInterval(function () {
+				//2.1获取现在的时间
+				var date = new Date();
+
+				//2.2求出总毫秒数
+				var mills = date.getMilliseconds();
+				var s = date.getSeconds() + mills /1000;
+                var m = date.getMinutes() + s / 60;
+				var h = date.getHours() % 12 + m / 60;
+               
+				//2.3时针旋转
+          		mBox.style.transform = 'rotate('+ h * 30 +'deg)';
+          		hBox.style.transform = 'rotate('+ m * 6 +'deg)';
+          		sBox.style.transform = 'rotate('+ s * 6 +'deg)';
+			},10);
+		}
+	</script>
+</body>
+</html>

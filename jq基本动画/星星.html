@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>星星</title>
+	<link rel="stylesheet" href="">
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	body{
+		background: #000;
+	}
+	span{
+		width: 30px;
+		height: 30px;
+		background: url('img/star.png') no-repeat;
+		position: absolute;
+		background-size: 100%  100%;
+		animation: flash 1s alternate infinite;
+	}
+	@keyframes flash {
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+       span:hover{
+            transform: scale(3, 3) rotate(180deg) !important;
+            transition: all 1s;
+        }
+</style>
+<body>
+<script>
+	window.onload = function () {
+		//1.求出屏幕的尺寸
+        var screenW = document.documentElement.clientWidth;
+        var screenH = document.documentElement.clientHeight;
+console.log(screenH)
+        //2。动态创建星星
+        for(var i = 0; i < 150; i++) {
+        	var span = document.createElement('span');
+        	document.body.appendChild(span);
+        	//2.2随机坐标
+        	var x = parseInt(Math.random() * screenW);
+        	var y = parseInt(Math.random() * screenH);
+        	span.style.left = x + 'px';
+        	span.style.top= y + 'px';
+
+        	var scale = Math.random() *1.5;
+        	span.style.transform = 'scale('+ scale + ','+ scale + ')';
+
+        	var rate = Math.random() *1.5;
+        	span.style.animationDelay = rate + 's';
+
+        }
+	}
+</script>
+</body>
+</html>
