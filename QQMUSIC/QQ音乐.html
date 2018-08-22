@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QQ音乐</title>
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+
+
+
+</head>
+<body>
+    <div class="top">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="img/player_logo.png" alt=""></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">登录</a></li>
+                    <li class="dropdown">
+                        <a href="#" >设置 <span class="caret"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+    <div class="center">
+    <div class="row">
+        <div class="col-xs-8 ">
+        <ul class="ulTop">
+            <li><button class="btn" type="submit"><span class="ico1"></span>收藏</button></li>
+            <li><button class="btn" type="submit"><span class="ico2"></span>添加到</button></li>
+            <li><button class="btn" type="submit"><span class="ico3"></span>下载</button></li>
+            <li><button class="btn" type="submit"><span class="ico4"></span>删除</button></li>
+            <li><button class="btn" type="submit"><span class="ico5"></span>清空列表</button></li>
+        </ul>
+            <div class="content_list" data-mcs-theme="minimal-dark">
+                <ul class="ulRow">
+                    <li class="list-title" >
+                        <div class="check"><span></span></div>
+                        <div class="title">歌曲</div>
+                        <div class="name">歌手</div>
+                        <div class="time">时长</div>
+                    </li>
+                </ul>
+            </div>
+
+    </div>
+        <div class="col-xs-4 ">
+            <div class="Album">
+                <a href="javascript:;" ></a>
+                <img src="img/XS.jpg" alt="" class="song_info_pic">
+                <div class="text">
+                <div class="song_name">歌名称：
+                    <a href="javascript:;">如约而至</a>
+                </div>
+                <div class="song_singer">歌手名：
+                    <a href="javascript:;">许嵩</a>
+                </div>
+                <div class="song_album">专辑名：
+                    <a href="javascript:;" >如约而至</a>
+                </div>
+                </div>
+            </div>
+                <div class="lycontent">
+                <ul class="ly">
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 box1">
+                <a href="javascript:;" class="last"></a>
+                <a href="javascript:;" class="the_model"></a>
+                <a href="javascript:;" class="next"></a>
+            </div>
+            <div class="col-lg-4 box2">
+                <div class="bar_top">
+                    <a href="javascript:;" class="proSingName">如约而至  -  许嵩</a>
+                    <div class="bar_time">
+                        00:00 / 04:15
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="bar_line"></div>
+                    <i class="bar_dot"></i>
+                </div>
+            </div>
+            <div class="col-lg-3 box3">
+                <a href="javascript:;" class="loop_model1"></a>
+                <a href="javascript:;" class="love_model1"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;" class="pure_model1"></a>
+            </div>
+            <div class="col-lg-2 box4">
+                <a href="javascript:;" class="voice_model1"></a>
+                <div class="voice_bar">
+                    <div class="voice_line"></div>
+                    <i class="voice_dot" ></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="bg"></div>
+    <div class="mask"></div>
+    <audio src=""></audio>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script src="js/play.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/lyc.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

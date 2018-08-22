@@ -1,0 +1,556 @@
+/***************************通用部分*************************/
+body{
+    color: rgba(255,255,255,0.8);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    user-select: none;
+}
+.bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:url("../img/XS.jpg") no-repeat 0 0;
+    background-size:cover;
+    z-index: -2;
+    filter: blur(100px);
+}
+.mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.35);
+}
+/***************************通用部分*************************/
+
+/***************************顶部*************************/
+.navbar-right {
+    float: right !important;
+    margin-right:20px;
+    margin-top: 10px;
+}
+.caret {
+    border-top: none;
+    border-top: none;
+}
+.top .navbar{
+    background:none;
+    border: none;
+}
+.navbar-default .navbar-toggle{
+    background-color: #ddd;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    border:none;
+}
+.top .navbar-header a{
+    position: absolute;
+    top: 10px;
+    left: 24px;
+    opacity: 0.5;
+}
+
+.top .navbar-header a:hover{
+    opacity: 1;
+}
+.top .collapse .nav li a{
+    color: #fff;
+    opacity: 0.5;
+}
+.top .collapse .nav li a:hover{
+    background:none;
+    opacity: 1;
+}
+
+/***************************顶部*************************/
+/***************************中间*************************/
+
+.center .row .col-xs-8{
+    position: relative;
+}
+
+.center .ulTop{
+    position: absolute;
+    width: 800px;
+    left: 75px;
+}
+.center .ulTop li{
+    display: inline-block;
+    margin-left: 5px;
+
+}
+.center .ulTop li button{
+    width: 122px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    opacity: 0.5;
+    color: #fff;
+    background-color: transparent;
+    line-height: 18px;
+    font-size: 14px;
+    border-radius: 2px;
+
+}
+.center .ulTop li button:hover{
+    opacity: 1;
+    color: #fff;
+}
+.center .ulTop li button span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: -3px;
+    background: url("../img/icon_sprite.png") no-repeat 0 0;
+
+}
+.center .ulTop li button .ico1{
+    background-position: -60px -20px;
+}
+.center .ulTop li button .ico2{
+    background-position: -20px -20px;
+}
+.center .ulTop li button .ico3{
+    background-position: -40px -240px;
+}
+.center .ulTop li button .ico4{
+    background-position: -100px -20px;
+}
+.center .ulTop li button .ico5{
+    background-position: -40px -300px;
+}
+.center .ulRow{
+    list-style: none;
+}
+.content_list{
+    position: absolute;
+    width: 800px;
+    height: 400px!important;
+    top:70px;
+    left:80px;
+    overflow: auto;
+}
+.center .ulRow li{
+    width: 700px;
+    height: 58px;
+    border-bottom: 1px solid #a8a3a1;
+    box-sizing: border-box;
+    line-height: 70px;
+    font-size: 15px;
+    position: relative;
+
+}
+.center .ulRow li:nth-child(1){
+    border-top: 1px solid #a8a3a1;
+}
+
+.center .ulRow .list-title div{
+    float: left;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.center .ulRow .music div{
+    float: left;
+    height: 100%;
+}
+.center .ulRow .list-title .check {
+    float: left;
+    width: 55px;
+    height: 50px;
+}
+.center .ulRow .music .check {
+    float: left;
+    width: 50px;
+}
+.center .ulRow .list-title .title{
+    margin-left: 15px;
+}
+.center .ulRow .music .check span,.center .ulRow .list-title .check span{
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.center .ulRow .music .check span:hover,.center .ulRow .list-title .check span:hover{
+    opacity: 1;
+}
+.center .ulRow .music .check .select,.center .ulRow .list-title .check .select{
+
+    background: url("../img/icon_sprite.png") no-repeat -58px -79px;
+    opacity: 1;
+}
+
+.center .ulRow .music .number,.center .ulRow .list-title .number{
+    width: 20px;
+    opacity: 0.5;
+}
+.center .ulRow .music .number i{
+    font-style: normal;
+
+}
+.center .ulRow .music .number span{
+    position: absolute;
+    bottom: 16px;
+    background: url("../img/wave.gif") no-repeat 0 0;
+    width: 10px;
+    height: 10px;
+    display: none;
+}
+.center .ulRow .music .title,.center .ulRow .list-title .title{
+    width: 60%;
+    height: 100%;
+    cursor: pointer;
+    user-select: none;
+}
+.center .ulRow .music .title{
+    opacity: 0.5;
+    display: inline-block;
+}
+.center .ulRow .music .name,.center .ulRow .list-title .name{
+    width: 24%;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.center .ulRow .music .name:hover{
+    opacity: 1;
+}
+.center .ulRow .music .time{
+    opacity: 0.5;
+}
+.center .ulRow .music .muse{
+    margin-right: 20px;
+    margin-top: 13px;
+    float: right;
+    width: 200px;
+    height: 100%;
+    text-align: center;
+
+}
+.center .ulRow .music .muse a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    color: rgba(255,255,255,.8);
+    background: url("../img/icon_list_menu.png")no-repeat 0 0;
+}
+
+.center .ulRow .music .muse .play_model1{
+    background-position: -120px 0;
+    opacity: 0.5;
+}
+.center .ulRow .music .muse .play_model1{
+    opacity: 1;
+}
+
+.center .ulRow .music .muse a:nth-child(2){
+    background-position: -120px -80px;
+    opacity: 0.5;
+}
+.center .ulRow .music .muse a:nth-child(2):hover{
+    opacity: 1;
+}
+.center .ulRow .music .muse a:nth-child(3){
+    background-position: -120px -120px;
+    opacity: 0.5;
+}
+.center .ulRow .music .muse a:nth-child(3):hover{
+    opacity: 1;
+}
+.center .ulRow .music .muse a:nth-child(4){
+    background-position: -120px -40px;
+    opacity: 0.5;
+}
+.center .ulRow .music .muse a:nth-child(4):hover{
+    opacity: 1;
+}
+.center .ulRow .music .muse .play_model2{
+    background-position: -120px -200px !important;
+    opacity: 0.5;
+}
+.center .ulRow .music .muse .play_model2{
+    opacity: 1;
+}
+.center .ulRow .music .time a{
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    right: 5px;
+    bottom: 5px;
+    display: none;
+    cursor: pointer;
+    background: url("../img/icon_list_menu.png") no-repeat -80px -160px;
+}
+
+/**************************************************/
+
+.col-xs-4{
+    position: relative;
+}
+.center .Album{
+    position: absolute;
+
+    width: 200px;
+    left:100px;
+}
+.center .Album .song_info_pic{
+    background: url("../img/album_cover_player.png") no-repeat 0 0;
+    position: absolute;
+    width: 209px;
+    height: 186px;
+    left: 9px;
+}
+.center .Album img{
+    width: 186px;
+    height: 186px;
+}
+.center .Album div{
+    margin: 20px;
+    width: 400px;
+    height: 10px;
+    color: #ccc;
+    font-size: 15px;
+}
+.center .Album div a{
+    color:#fff;
+    opacity: 0.5;
+    text-decoration: none;
+}
+.center .Album div a:hover{
+    opacity: 1;
+}
+.text{
+    position: absolute;
+    width: 400px;
+    top: 160px;
+}
+.song_singer{
+    padding-left: 15px;
+}
+.ly{
+    text-align: center;
+}
+.ly li{
+    list-style: none;
+    line-height: 40px;
+    font-weight: bold;
+    color: rgba(255,255,255,0.5);
+}
+.lycontent{
+    position: absolute;
+    top: 300px;
+    left: -14px;
+    width: 400px;
+    height: 150px;
+    color: #ccc;
+    overflow: hidden;
+}
+ .ly .cur{
+    color:#31c27c;
+}
+/***************************中间*************************/
+/***************************底部*************************/
+.footer{
+    position: relative;
+    top: 460px;
+    width:97%;
+    height: 50px;
+
+}
+.footer .box1{
+    left: -58px;
+}
+.footer .box1 a{
+    margin-left: 20px;
+    margin-top: 48px;
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url("../img/player.png")  0 0;
+}
+.footer .box1 a:nth-child(1){
+    background-position: 0 -30px;
+}
+.footer .box1 .the_model{
+    background-position: 0 0;
+    height: 30px;
+    margin-top: 44px;
+}
+.footer .box1 .the_model2{
+    background-position: -27px 0;
+    height: 30px;
+    margin-top: 44px;
+}
+.footer .box1 a:nth-child(3){
+    background-position: 0 -52px;
+}
+.footer .box2{
+    left: -70px;
+}
+.footer .box2 .bar_top{
+    width: 600px;
+    position: absolute;
+    top: 30px;
+}
+.footer .box2 .bar_top i {
+    opacity: 0.5;
+    position: relative;
+    top: -3px;
+    margin:2px;
+}
+.footer .box2 .bar_top a{
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.5;
+}
+.footer .box2 .bar_top a:hover{
+    opacity: 1;
+}
+.footer .box2 .bar_time{
+    display: inline-block;
+    float: right;
+    opacity: 0.5;
+}
+.footer .box2 .bar{
+    left: 5px;
+    width: 600px;
+    position: absolute;
+    bottom: -60px;
+    border: 2px solid #a6a6a6;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+.footer .box2 .bar .bar_line{
+    position: absolute;
+    width: 0;
+    opacity: 1;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    top: -1px;
+    left: -1px;
+}
+.footer .box2 .bar_dot{
+    position: absolute;
+    width: 10px;
+    height:10px;
+    opacity: 1;
+    border: 1px solid white;
+    border-radius: 100px;
+    top: -5px;
+    left: -2px;
+    background-color: white;
+    cursor: pointer;
+}
+.footer .box3{
+    left:180px;
+    width: 350px;
+
+    color: black;
+    top: 38px;
+}
+.footer .box3 a{
+    margin-left: 20px;
+    float: left;
+    width: 30px;
+    height: 26px;
+    background: url("../img/player.png") no-repeat 0 0;
+}
+.footer .box3  .loop_model1:nth-child(1){
+    background-position: 0 -206px;
+}
+.footer .box3  .loop_model2:nth-child(1){
+
+    background-position: 0 -256px;
+}
+.footer .box3  .loop_model3:nth-child(1){
+    height: 24px;
+    background-position: 0 -72px;
+}
+.footer .box3 .loop_model4:nth-child(1){
+
+    background-position: 0 -232px;
+}
+.footer .box3 .love_model1:nth-child(2){
+    background-position: 0px -94px;
+}
+.footer .box3 .love_model2:nth-child(2){
+    background-position: -30px -94px;
+}
+.footer .box3 a:nth-child(3){
+    background-position: 0 -117px;
+}
+.footer .box3 a:nth-child(4){
+    background-position: 0 -398px;
+}
+.footer .box3 .pure_model1:nth-child(5){
+    width: 80px;
+    background-position: 0 -282px;
+}
+.footer .box3 .pure_model2:nth-child(5){
+    width: 80px;
+    background-position: 0 -311px;
+}
+.footer .box4{
+
+    left: 150px;
+
+}
+.footer .box4 .voice_model1{
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    top:40px;
+    background: url("../img/player.png") no-repeat 0 -144px;
+}
+.footer .box4 .voice_model2{
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    top:40px;
+    background: url("../img/player.png") no-repeat 0 -180px;
+}
+.footer .box4 .voice_bar{
+    width: 80px;
+    position: absolute;
+    bottom: -50px;
+    left: 48px;
+    border: 2px solid #a6a6a6;
+    border-radius: 5px;
+
+    cursor: pointer;
+    margin: 0 0;
+}
+.footer .box4 .voice_line{
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    border: 1px solid white;
+    border-radius: 5px;
+    top: -1px;
+    left: -1px;
+}
+.footer .box4 .voice_dot{
+    position: absolute;
+    width: 10px;
+    height:10px;
+
+    bottom: -5px;
+    left:99%;
+    border: 1px solid white;
+    border-radius: 100px;
+    background-color: white;
+    cursor: pointer;
+}
+/***************************底部*************************/
+
+._mCS_1 .mCSB_scrollTools .mCSB_dragger_bar{
+    width:8px;
+    height: 200px;
+}
