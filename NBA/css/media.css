@@ -1,0 +1,624 @@
+@media (min-width: 1200px) {
+    .container {
+        /*width: 1440px;*/
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        /*! width: 970px; */
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        /*! width: 750px; */
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        /*width: 970px;*/
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        /*width: 750px;*/
+    }
+}
+
+/************************************/
+@media (max-width: 1240px) {
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        height:160px;
+    }
+    .top-bar .top-bar-1 {
+        padding: 47px 0 17px 4%;
+        position: relative;
+        top: -23px;
+        left: -35px;
+    }
+    .top-bar .top-bar-1 .commission-shop {
+        width: 167px;
+        margin-right: -105px;
+        margin-top: -5px;
+        box-sizing: border-box;
+    }
+    .top-bar .top-bar-2 {
+        position: relative;
+        top: -34px;
+        right: 1%;
+        padding: 0;
+        z-index: 1110;
+        height: 50px;
+    }
+    .top-bar .top-bar-3 {
+        position: relative;
+        top: -100px;
+        left: 89%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 40px;
+        z-index: 1100;
+    }
+    .top-bar-4{
+        width: 108%;
+        height: 38px;
+        top: 124px;
+        left: -52px;
+        position: absolute;
+        background: #0669b2;
+    }
+    .top-bar-4 ul li a{
+        font-size: 12px;
+    }
+    .Carousel-pic{
+        margin-top: -1px;
+    }
+    .carousel-control .pre{
+        width: 40px;
+        height: 200px;
+        top: 134px;
+        left:46px;
+        position: absolute;
+        background: url("../img/icons.png")no-repeat -10px -2489px;
+    }
+    .carousel-control .next{
+        width: 40px;
+        height: 200px;
+        top: 134px;
+        left:46px;
+        position: absolute;
+        background: url("../img/icons.png")no-repeat -133px -2489px;
+    }
+    .Team_Icon {
+        position: relative;
+        top: 20px;
+        width: 88%;
+        left: 55px;
+    }
+    .team-box{
+        position: relative;
+        left: 28px;
+        width: 100%;
+    }
+    .team-box .team-ico1{
+        display: none;
+    }
+    .team-box .team-ico{
+        display: inline-block;
+        width: 343px;
+    }
+    .team-box .team-ico:nth-child(2){
+        position: absolute;
+        left: 58%;
+    }
+    .team-box .team-ico ul li:first-child{
+        display: block;
+        width: 95%;
+        text-align: center;
+    }
+    .team-box .team-ico ul li:first-child img {
+        margin-right: auto;
+        margin-left: auto;
+        height: auto;
+        width: 40%;
+    }
+    .team-box .team-ico ul li {
+        display: inline-block;
+        width: 26%;
+        height: auto;
+        float: left;
+        text-align: center;
+        margin: 0px 24px 22px 0px;
+    }
+    .team-box .team-ico ul li img{
+        width: 90%;
+    }
+    .team-border{
+        width: 0;
+        height: 92%;
+        display: block;
+        border-right: 1px solid #e2e4ea;
+        position: absolute;
+        bottom: 6%;
+        left: 47%;
+    }
+    .Recommend {
+        position: relative;
+        width: 100%;
+        left: 30px;
+    }
+    .Recommend .col-lg-6 {
+        margin: 10px 15px;
+        display: inline-block;
+    }
+    .scroll-next a {
+        left: 75px;
+    }
+    .brand {
+        width: 91%;
+        left: 35px;
+    }
+    .shop {
+        top: 5px;
+        left: -20px;
+    }
+    .footer {
+        height: 561px;
+    }
+    .footer-mod1 .footer-img {
+        top: 0;
+        left: 0;
+    }
+    .footer-mod1 .footer-login {
+        width: 96px;
+        left: 0;
+        top: 80px;
+    }
+    .footer-mod1 .footer-qr {
+        width: 170px;
+        left: 35%;
+        top: 80px;
+    }
+    .footer-mod1 .footer-concat {
+        width: 251px;
+        left: 68%;
+        top: 80px;
+    }
+    .footer-mod1 .footer-begin {
+        margin-top: 350px;
+    }
+    .Carousel .Carousel-pic {
+        margin-top: 0;
+    }
+
+}
+/********************************************/
+@media (max-width: 860px){
+    .team-box .team-ico ul li:first-child {
+        display: block;
+        width: 80%;
+        text-align: center;
+    }
+    .team-box .team-ico ul li {
+        display: inline-block;
+        width: 22%;
+        height: auto;
+        float: left;
+        text-align: center;
+        margin: 0px 24px 22px 0px;
+    }
+    .Recommend .col-lg-6 {
+        margin: 10px 10px;
+        display: inline-block;
+    }
+    .Recommend {
+        position: relative;
+        width: 100%;
+        left: 55px;
+    }
+    .top-bar .top-bar-3 {
+        left: 88%;
+    }
+    .shop .scroll-bar {
+        margin-left: 100px;
+    }
+    .scroll-bar ul {
+        width: 600%;
+    }
+    .scroll-pre {
+        left: 50px;
+    }
+    .Carousel .Carousel-pic {
+        margin-top: 0;
+    }
+}
+/********************************************/
+@media (max-width: 768px) {
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        height:100px;
+        width: 100%;
+    }
+    .top-bar .top-bar-1 {
+        padding: 47px 0 17px 4%;
+        position: relative;
+        top: -23px;
+        left: -35px;
+        text-align: center;
+    }
+    .top-bar .top-bar-1 .commission-shop {
+        display: none;
+    }
+    .top-bar .top-bar-2 {
+        display: none;
+    }
+    .top-bar .top-bar-3 {
+        display: none;
+    }
+    .top-bar-4{
+        display: none;
+    }
+
+    .top-bar-list{
+        display: block;
+        float: right;
+        margin-top: -106px;
+        margin-right: 10px;
+        width: 7%;
+    }
+    .top-bar-list a{
+        outline: none;
+
+    }
+    .top-bar-list img  {
+        width: 100%;
+        height: 100%;
+    }
+    .top-bar-list i{
+        position: relative;
+        font-style: normal;
+        width: 20px;
+        height: 20px;
+        top: -47px;
+        left: 38px;
+        color: #fff;
+        padding: 1px 6px;
+        float: left;
+        background: url("../img/cart-icons.png") no-repeat -150px -300px ;
+    }
+    .top-bar-list1{
+        display: block;
+        position: absolute;
+        top: 98px;
+        left: 0;
+        width:84%;
+    }
+    .top-bar-list1 a{
+        width:768px;
+        outline: none;
+    }
+    .top-bar-list1 a img{
+        width:120%;
+
+    }
+    .top-bar-list2{
+        display: block;
+        position: relative;
+        top: -106px;
+        left: 14px;
+        float: left;
+        width: 6%;
+
+    }
+    .top-bar-list2 img {
+        width: 100%;
+        height: 100%;
+
+    }
+    .Carousel .Carousel-pic img{
+        display: none;
+    }
+    .carousel {
+        top:48px;
+        height: 500%;
+        width: 100%;
+        position: relative;
+    }
+    .Carousel .item .lg {
+       display: none;
+   }
+    .Carousel .item .sm {
+        display: block;
+        width: 100%;
+    }
+    .carousel-control .next {
+        width: 40px;
+        height: 200px;
+        top: 420px;
+        left: 7px;
+        position: absolute;
+        background: url("../img/icons.png")no-repeat -133px -2489px;
+    }
+    .carousel-control .pre{
+        top: 420px;
+    }
+    .top-bar-5{
+        width: 110%;
+        height:73px;
+        position: relative;
+        background: #fff;
+        left: -17px;
+        top: 15px;
+        z-index: 999;
+
+    }
+    #search{
+        display: block;
+        float: left;
+        top: 17px;
+        left:44px;
+        width: 70%;
+        border: 2px solid #cfcfcf;
+    }
+    #search input{
+        height: 90%;
+    }
+    .Team_Icon {
+        position: relative;
+        top: 72px;
+        width: 88%;
+        left: 42px;
+    }
+    .Team_Icon  .team-ico{
+        display: none;
+    }
+    .Team_Icon .team-border{
+        display: none;
+    }
+    .team-ico2{
+       display: block !important;
+       border: 1px #e3e4e8 solid;
+        width: 91%;
+        height: 162px;
+   }
+    .team-mod-img{
+        width: 50%;
+        text-align: center;
+        height:162px;
+        font-size: 18px;
+        display: inline-block;
+
+        float: left;
+        border-right: 1px solid #e3e4e8;
+    }
+    .team-mod-img:nth-child(2){
+        border-right: 0;
+    }
+    .team-mod-img a{
+        color: #000;
+        position: absolute;
+        top: 68px;
+        text-decoration: underline;
+    }
+    .team-mod-img img{
+        margin-top: 20px;
+    }
+    .Recommend .col-lg-6 {
+        margin: 10px 14px;
+        width: 77%;
+        display: block;
+    }
+    .Recommend {
+        position: relative;
+        width: 100%;
+        left: 40px;
+        top: 77px;
+    }
+    .sort{
+        display: block;
+        position: relative;
+        top: 84px;
+        left: 54px;
+    }
+    .sort ul li{
+        display: inline-block;
+        width: 20%;
+        height: 30px;
+        color: #ffffff;
+        text-align: center;
+        line-height:30px;
+        background: #0a3665;
+        margin-right: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .brand{
+        top: 80px;
+    }
+    .shop{
+        top: 36px;
+    }
+    .shop .team-title::before{
+        background-color: #a7a9ac;
+        content: "";
+        height: 1px;
+        left: 55px;
+        position: absolute;
+        top: 10px;
+        width: 84%;
+    }
+    .footer {
+        top: 20px;
+    }
+    .footer-mod1 {
+        margin-left: 40px;
+    }
+    .footer-login,.footer-qr,.footer-concat{
+        display: none;
+    }
+    .footer-mod1 .footer-img{
+        left: 25%;
+    }
+    .footer-mod1 .footer-begin {
+        font-size: 10px;
+    }
+    .footer-sm{
+        display: block;
+        position: absolute;
+        color: #fff;
+        top: 16%;
+        left: 25%;
+
+        text-align: center;
+    }
+    .footer-sm div{
+        text-align: left;
+        font-size: 15px;
+        margin-left: 40px;
+    }
+    .footer-sm div i{
+        width: 16px;
+        height: 15px;
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 67px;
+        background: url("../img/icons.png")no-repeat -60px -10px;
+    }
+    .footer-sm div .tel i{
+        width: 16px;
+        height: 15px;
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 103px;
+        background: url("../img/icons.png")no-repeat -86px -10px;
+    }
+    .footer-sm div .time{
+        width: 16px;
+        height: 15px;
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 136px;
+        background: url("../img/icons.png")no-repeat -35px -10px;
+    }
+    .footer-sm div .wb{
+        width: 16px;
+        height: 15px;
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 170px;
+        background: url("../img/icons.png")no-repeat -280px -10px;
+    }
+    .footer-sm div .wx{
+        width: 16px;
+        height: 15px;
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 206px;
+        background: url("../img/icons.png")no-repeat -250px -10px;
+    }
+    .footer-sm div .app{
+        margin-left: -30px;
+        text-decoration: underline;
+    }
+    .footer-sm a{
+        color: #fff;
+        display: block;
+        text-decoration: none;
+        margin-bottom: 15px;
+    }
+    .glyphicon-chevron-right::before{
+        margin: -45px 0 0 -45px;
+    }
+    .shop {
+        left: 0;
+    }
+    .shop .scroll-bar {
+        width: 30%;
+        height: 288px;
+        margin-left: 230px;
+        overflow: hidden;
+        position: relative;
+    }
+    .scroll-bar ul {
+        width: 2000%;
+    }
+    .scroll-next {
+        right: 120px;
+    }
+}
+@media (max-width: 500px){
+    .top-bar .top-bar-1 {
+        top: -25px;
+        left: 0;
+    }
+    .top-bar-list{
+        position: relative;
+    }
+    .top-bar-list i {
+        position: absolute;
+        top: -10px;
+        left: 20px;
+    }
+    .top-bar-list2 {
+        display: block;
+        position: relative;
+        top: -106px;
+        left: 14px;
+        float: left;
+        width: 8%;
+    }
+    #search {
+        top: 10px;
+        left: 35px;
+    }
+    .team-ico2 {
+        width: 77%;
+    }
+    .team-mod-img a {
+      display: none;
+    }
+    .sort {
+        left: 25px;
+    }
+    .Recommend {
+
+        left: 20px;
+
+    }
+    .brand ul li {
+        display: inline-block;
+        width: 19%;
+        height: 95px;
+        margin-right: -20px;
+    }
+    .brand ul li img {
+        width: 80%;
+    }
+    .brand {
+        width: 91%;
+        left: 10px;
+    }
+    .shop .scroll-bar {
+        width: 60%;
+        height: 288px;
+        margin-left: 87px;
+        overflow: hidden;
+        position: relative;
+    }
+    .footer {
+        height: 620px;
+    }
+    .footer-mod1 {
+        margin-left: 0;
+    }
+    .footer-mod1 .footer-begin ul {
+        margin-left: -20px;
+    }
+}
